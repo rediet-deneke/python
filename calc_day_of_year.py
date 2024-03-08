@@ -33,14 +33,15 @@ def days_in_month(year, month):
 
 def day_of_year(year, month, day):
     days = 0
-    for i in range(month):
-        ret = days_in_month(year, i + 1)
+    for i in range(1, month + 1):
         #current month
         if i == month:
-            days += ret - (ret - day)
+            days += day
+            print("here in curr month ", i)
         else:
+            ret = days_in_month(year, i + 1)
             days += ret
-        
+            print("here", i)
     return days
 
 print(day_of_year(2024, 3, 7))
