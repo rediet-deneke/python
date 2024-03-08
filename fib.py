@@ -7,7 +7,7 @@ def fib(n):
         return 1
 
     sum += fib(n - 1) + fib(n - 2)
-    return sum  
+    return sum  # we can also: return fib(n - 1) + fib(n - 2)
     
 
 
